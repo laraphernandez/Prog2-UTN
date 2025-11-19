@@ -5,11 +5,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * Interfaz DAO específica para operaciones con Microchips.
- * Extiende las operaciones CRUD genéricas y agrega búsqueda por código.
+ * Interfaz específica para operaciones de Microchip.
+ * Extiende GenericDAO y agrega métodos propios.
  */
 public interface IMicrochipDAO extends GenericDAO<Microchip> {
     
-    // Busca un microchip por su código único
-    Microchip buscarPorCodigo(String codigo, Connection conn) throws SQLException;
+    // Busca un microchip por su código único.
+    Microchip buscarPorCodigo(String code, Connection conn) throws SQLException;
 }

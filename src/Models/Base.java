@@ -1,39 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Models;
 
-/**
- *
- * @author larap
- */
-public class Base {
-    private int id; 
-    private Boolean deleted; 
+// Clase base abstracta para todas las entidades del sistema
+public abstract class Base {
     
-    public Base(int id, Boolean deleted) {
+    private Long id;
+    private Boolean deleted;
+    
+    // Constructor vacío
+    public Base() {
+        this.deleted = false;  // Por defecto, no está eliminado
+    }
+    
+    // Constructor completo
+    public Base(Long id, Boolean deleted) {
         this.id = id;
         this.deleted = deleted;
     }
     
-    public Base() {
-        this.deleted = false;
-    }
-    public int getId() {
+    // GETTERS Y SETTERS 
+    
+    public Long getId() {
         return id;
     }
-     
-    public void setId(int id) {
+    
+    public void setId(Long id) {
         this.id = id;
     }
-       
-    public Boolean isDeleted() {
+    
+    public Boolean getDeleted() {
         return deleted;
     }
-
-    public void setDeleted(boolean deleted) {
+    
+    public void setDeleted(Boolean deleted) {
         this.deleted = deleted;
     }
-    
 }

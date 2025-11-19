@@ -1,26 +1,28 @@
 package Dao;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Interfaz genérica para operaciones CRUD en la base de datos.
- * @param <T> tipo de entidad que maneja el DAO
+ * Interfaz genérica para operaciones CRUD.
+ * Cada método recibe una Connection externa para participar en transacciones
  */
 public interface GenericDAO<T> {
     
-    // Inserta una nueva entidad en la base de datos
-    void crear(T entidad, Connection conn) throws SQLException;
+    // Crea una nueva entidad en la BD.
+
+    void crear(T entity, Connection conn) throws SQLException;
     
-    // Obtiene una entidad por su ID
+    // Lee una entidad por su ID.
     T leer(Long id, Connection conn) throws SQLException;
     
-    // Obtiene todas las entidades de la tabla
+    // Lee todas las entidades no eliminadas.
     List<T> leerTodos(Connection conn) throws SQLException;
     
     // Actualiza una entidad existente
-    void actualizar(T entidad, Connection conn) throws SQLException;
+    void actualizar(T entity, Connection conn) throws SQLException;
     
-    // Elimina una entidad por su ID
+    // Elimina lógicamente una entidad (marca deleted = true).
     void eliminar(Long id, Connection conn) throws SQLException;
 }
