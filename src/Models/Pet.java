@@ -86,9 +86,9 @@ public class Pet extends Base {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        sb.append("-----------------------------\n");
         sb.append("  MASCOTA ID: ").append(getId()).append("\n");
-        sb.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        sb.append("-----------------------------\n");
         sb.append("  Nombre: ").append(name).append("\n");
         sb.append("  Especie: ").append(species).append("\n");
         sb.append("  Raza: ").append(breed != null ? breed : "N/A").append("\n");
@@ -107,7 +107,7 @@ public class Pet extends Base {
             sb.append("  Sin microchip asignado\n");
         }
         
-        sb.append("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+        sb.append("-----------------------------");
         return sb.toString();
     }
 }

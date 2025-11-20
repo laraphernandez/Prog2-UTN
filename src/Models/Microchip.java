@@ -71,13 +71,13 @@ public class Microchip extends Base {
     
     @Override
     public String toString() {
-        return "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
+        return "-----------------------------\n" +
                "  MICROCHIP ID: " + getId() + "\n" +
-               "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n" +
+               "-----------------------------\n" +
                "  Código: " + code + "\n" +
                "  Fecha implantación: " + (implantationDate != null ? implantationDate : "N/A") + "\n" +
                "  Veterinaria: " + (veterinary != null ? veterinary : "N/A") + "\n" +
                "  Observaciones: " + (observations != null ? observations : "N/A") + "\n" +
-               "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
+               "-----------------------------";
     }
 }
